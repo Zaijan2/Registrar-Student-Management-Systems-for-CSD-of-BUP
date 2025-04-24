@@ -59,7 +59,7 @@ create table Enrollment (
     
     foreign key (StudentID) references Student (StudentID) 
     )
-
+	
 
 alter table Enrollment 
 	add index (CourseID);
@@ -68,3 +68,8 @@ alter table Course
 	add constraint fb_course_enrollment
     
 	foreign key (CourseID) references Enrollment( CourseID);
+
+
+
+
+
