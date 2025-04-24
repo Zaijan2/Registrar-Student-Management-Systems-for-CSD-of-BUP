@@ -1,0 +1,70 @@
+create table Department (
+	DepartmentID int primary key auto_increment,
+    DeptName varchar (100) not null,
+    DeptHead varchar(100) not null
+    )
+    
+
+create table Instructor (
+	InstructorID int primary key auto_increment,
+    Name varchar (100) not null, 
+    Email varchar (100) not null,
+    Contact varchar (15) not null,
+    DepartmentID int,
+    
+    foreign key (DepartmentID) references Department (DepartmentID)
+    )
+
+
+create table student (
+	StudentID int primary key auto_increment,
+    Name varchar (100) not null,
+    Dateofbirth date not null,
+    Email varchar (100) not null,
+    Contact varchar (15) not null,
+    Address varchar (15) not null
+     )
+
+
+create table ClassSchedule (
+	ScheduleID int primary key auto_increment,
+    CourseID int,
+    InstructorID int,
+    Room varchar (50) not null,
+    Day enum ('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'),
+    Timeslot time not null,
+    
+    foreign key (CourseID) references Instructor (InstructorId)
+    )
+    
+
+create table Course ( 
+	CourseID int primary key auto_increment,
+    CourseName varchar (100) not null,
+    Description text,
+    Credits int not null,
+    DepartmentID int,
+    
+    foreign key (DepartmentID) references Department (DepartmentID)
+    )
+
+
+create table Enrollment (
+	EnrollmentID int primary key auto_increment,
+    StudentID int,
+    CourseID int,
+    Semester varchar (10) not null,
+    Year year not null,
+    Status enum ('Enrolled','Dropped','Completed') not null,
+    
+    foreign key (StudentID) references Student (StudentID) 
+    )
+
+
+alter table Enrollment 
+	add index (CourseID);
+
+alter table Course 
+	add constraint fb_course_enrollment
+    
+	foreign key (CourseID) references Enrollment( CourseID);
