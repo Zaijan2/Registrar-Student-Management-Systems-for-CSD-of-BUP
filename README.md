@@ -1,3 +1,3 @@
-Registrar Management Systems For Computer Studies Department of Bicol University Polangui  
+Registrar Student Management System For Computer Studies Department of Bicol University Polangui  
 
 Our group proposes the development of a Registrar Management System specifically designed for the Computer Studies Department of Bicol University Polangui. This system aims to centralize and streamline the management of student-related information, class schedules, and personal records. By digitizing these processes, the system will help improve data organization, enhance communication between students and faculty, and support better decision-making within the department. The ultimate goal is to create a more efficient and transparent environment for academic management and student support.
