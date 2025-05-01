@@ -1,0 +1,2 @@
+insert into department ( DeptName, DeptHead)
+Values ("Department1", "Lebron James");
