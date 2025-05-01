@@ -56,3 +56,24 @@ create table ClassSchedule (
     foreign key (CourseID) references Course (CourseID),
     foreign key (InstructorID) references Instructor (InstructorID)
     );
+
+create table Grades (
+	GradeID int primary key auto_increment,
+    StudentID int not null,
+    SubjectID int not null,
+    CourseID int not null,
+    Semester varchar(20) not null,
+    Year  int not null,
+    Grade varchar (10) not null,
+    Remars enum("Pass","Failed","Dropped"),
+    
+    foreign key (StudentID) references Student (StudentID),
+    foreign key (SubjectID) references Subject (SubjectID),
+    foreign key (CourseID) references Course (CourseID) 
+    );
+
+create table Subject (
+	SubjectID int primary key auto_increment,
+	SubjectName varchar (100) not null,
+	Description varchar (500)
+	);
