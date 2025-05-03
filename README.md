@@ -75,7 +75,7 @@ The ultimate goal is to create a more efficient and transparent environment for 
 
 ## Language
 
--**MySQL Workbench
+MySQL Workbench
 
 ---
 
@@ -93,4 +93,5 @@ The ultimate goal is to create a more efficient and transparent environment for 
 ---
 
 ## Progress
-- **Phase 1: %,  Phase 2: %, Phase 3: %, Phase 4: %, Phase 5: %, Phase 6: %
+Phase 1: %,  Phase 2: %, Phase 3: %, Phase 4: %, Phase 5: %, Phase 6: %
+---
