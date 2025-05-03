@@ -72,8 +72,7 @@ academic management and student support.
 
 ---
 
-## Language
-
+## 💻 Language
 MySQL Workbench
 
 ---
