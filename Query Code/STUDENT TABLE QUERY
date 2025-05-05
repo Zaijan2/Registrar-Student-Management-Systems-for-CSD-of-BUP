@@ -1,7 +1,7 @@
 INSERT INTO student (
   firstname, lastname, middleinitial, DOB,
   email, contact, street, barangay,
-  municipality, province, block, course)
+  municipality, province, block, courseid)
  VALUES
 ('Ava', 'Miller', 'A', '2003-11-23', 'ava.miller@school.edu', '633770586831', 'F. Aquende Drive', 'Pawa', 'Guinobatan', 'Albay', '1A' ,4),
 ('John', 'Flores', 'B', '2005-03-17', 'john.flores@school.edu', '635710230172', 'Magallanes St', 'Baybay', 'Legazpi City', 'Albay', '1A' ,2),
