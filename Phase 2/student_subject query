@@ -1,1 +1,11 @@
-
+INSERT INTO student_subject (StudentID, SubjectID)
+SELECT 
+    s.StudentID,
+    sub.SubjectID
+FROM (
+    SELECT StudentID FROM student ORDER BY RAND() LIMIT 30
+) AS s
+JOIN (
+    SELECT SubjectID FROM subject ORDER BY RAND() LIMIT 30
+) AS sub
+ON 1=1;
