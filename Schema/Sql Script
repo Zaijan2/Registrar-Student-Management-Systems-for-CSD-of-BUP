@@ -1,79 +1,97 @@
-create table Department (
-	DepartmentID int primary key auto_increment,
-	DeptName varchar (100) not null,
-	DeptHead varchar (100) not null
-);
 
-create table Course (
-	CourseID int primary key auto_increment,
-    CourseName varchar (100) not null,
-    Description varchar (100) not null,
-    Credits int not null,
-    DepartmentID int,
 
-	foreign key (DepartmentID) references Department(DepartmentID)
+create table course (
+	courseID int primary key auto_increment,
+    courseName varchar (100),
+    Description text,
+    credits int
     );
 
-create table Instructor (
-	InstructorID int primary key auto_increment,
-    Name varchar (100) not null,
-    Email varchar (100) not null,
-    Contact varchar (15) not null,
-    DepartmentID int,
-    
-    foreign key (DepartmentID) references Department (DepartmentID)
-    );
-
-create table Student (
-	StudentID int primary key auto_increment,
-    Name varchar (100) not null,
-    DOB date not null,
-    Email varchar (100) not null,
-    Contact varchar (15) not null,
-    Address varchar (100) not null
-    );
-
-create table Enrollment (
-	EnrollmentID int primary key auto_increment,
-	StudentID int,
-    CourseID int,
-    Semester varchar(10) not null,
-    Year year not null,
-    Status enum ('Enrolled', 'Dropped', 'Completed') not null,
-    
-    foreign key (StudentID) references Student (StudentID),
-    foreign key (CourseID) references Course (CourseID)
-    );
-
-create table ClassSchedule (
-	ScheduleID int primary key auto_increment,
-    CourseID int,
-    InstructorID int,
-    Room varchar (50) not null,
-    Day enum ('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'),
-    TimeSlot  time not null,
-    
-    foreign key (CourseID) references Course (CourseID),
-    foreign key (InstructorID) references Instructor (InstructorID)
-    );
-
-create table Grades (
-	GradeID int primary key auto_increment,
-    StudentID int not null,
-    SubjectID int not null,
-    CourseID int not null,
-    Semester varchar(20) not null,
-    Year  int not null,
-    Grade varchar (10) not null,
-    Remars enum("Pass","Failed","Dropped"),
-    
-    foreign key (StudentID) references Student (StudentID),
-    foreign key (SubjectID) references Subject (SubjectID),
-    foreign key (CourseID) references Course (CourseID) 
-    );
-
-create table Subject (
+create table subject (
 	SubjectID int primary key auto_increment,
-	SubjectName varchar (100) not null,
-	Description varchar (500)
-	);
+    SubjecName varchar (100),
+    Description text,
+    );
+
+create table student (
+	StudenID int primary key auto_increment,
+    lastname varchar (50),
+    firstname varchar (50),
+    middleInitial varchar(10),
+    DOB date,
+    Email varchar (100),
+    contact varchar (100),
+    street varchar (100),
+    barangay varchar (100),
+    municipality varchar (100),
+    province varchar (100),
+    block varchar (50),
+    CourseID int,
+    foreign key (CourseID) references course(CourseID)
+    );
+
+create table faculty (
+	FacultyID int primary key auto_increment,
+    Lastname varchar (50),
+    firstname varchar (50),
+    middleInitial varchar (10),
+    Email varchar (100),
+    Contact varchar (15),
+    SubjectID int,
+    foreign key (subjectID) references subject (subjectID)
+    );
+
+create table grades (
+	GradeID int primary key auto_increment,
+    Semester varchar(10),
+    Year year,
+    grade varchar (10),
+    remarks enum ('Passed','Failed','Incomplete'),
+    StudentID int,
+    SubjectID int,
+    CourseID int,
+    foreign key (studentID) references student (studentID),
+    foreign key (subjectID) references subject (subjectID),
+    foreign key (courseID) references course (courseID)
+    );
+
+create table enrolledsubject (
+	EnrolledSubject int primary key auto_increment,
+    Semester varchar (10),
+    year year,
+    StudentID int,
+    SubjectID int,
+    CourseID int,
+    foreign key (StudentID) references student (studentid),
+    foreign key ( subjectID) references subject (subjectid),
+    foreign key (courseid) references course (courseid)
+    );
+
+create table enrollment (
+	EnrollmentID int primary key auto_increment,
+    Semester varchar (100),
+    Year year,
+    status enum ('Enrolled','Completed','Dropped'),
+    timestamp timestamp,
+    StudentID int,
+    CourseID int,
+    foreign key (studentID) references student (studentID),
+    foreign key (courseID) references course (courseid)
+    );
+
+create table classschedule (
+	ScheduleID int primary key auto_increment,
+    block varchar (50),
+    room varchar (50),
+    day enum ('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'),
+    timeslot time,
+    StudentID int,
+    courseID int,
+    FacultyID int,
+    subjectID int,
+    foreign key (StudentID) references student (studentID),
+    foreign key (courseID) references course (courseid),
+    foreign key (facultyid) references faculty (facultyID),
+    foreign key (subjectID) references subject (subjectid)
+    );
+
