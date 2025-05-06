@@ -83,20 +83,20 @@ MySQL Workbench
 |-------------------------------|-------------------|
 | Zaijan M. Alvarado            | Project Lead      |
 | Jon Matthew B. Mella          | Database Architect|
-| Symon Cristoffer B. Cano      | Database Architect|
 | Jaiden Nykluz Fermante        | SQL Developer     |
 | Otelo P. Nobleza III          | SQL Developer     |
 | Andrei Lloyd V. Sinfuego      | QA Tester         |
+| Symon Cristoffer B. Cano      | QA Tester         |
 
 ---
 
 ## 📈 Progress
 
-- [/ ] **Phase 1**: 50 %  
-- [ ] **Phase 2**: ___%  
-- [ ] **Phase 3**: ___%  
-- [ ] **Phase 4**: ___%  
-- [ ] **Phase 5**: ___%  
-- [ ] **Phase 6**: ___%
+-  **Phase 1**: 75 %  
+-  **Phase 2**: 25 %  
+-  **Phase 3**: ___%  
+-  **Phase 4**: ___%  
+-  **Phase 5**: ___%  
+-  **Phase 6**: ___%
 
 
