@@ -28,6 +28,10 @@ create table student (
     block varchar (50),
     CourseID int,
     foreign key (CourseID) references course(CourseID)
+	subjectID int,
+	foreign key (subjectID) references subject(subjectID)
+	
+
     );
 
 create table faculty (
@@ -55,17 +59,6 @@ create table grades (
     foreign key (courseID) references course (courseID)
     );
 
-create table enrolledsubject (
-	EnrolledSubject int primary key auto_increment,
-    Semester varchar (10),
-    year year,
-    StudentID int,
-    SubjectID int,
-    CourseID int,
-    foreign key (StudentID) references student (studentid),
-    foreign key ( subjectID) references subject (subjectid),
-    foreign key (courseid) references course (courseid)
-    );
 
 create table enrollment (
 	EnrollmentID int primary key auto_increment,
