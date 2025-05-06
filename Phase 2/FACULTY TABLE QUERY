@@ -1,1 +1,14 @@
-
+insert into faculty (lastname, firstname,middleinitial,email,contact,subjectid)
+	values 
+    ('Naz','Vince Angelo','E','vinceangelo.naz@school.edu','639876859302',5),
+	('Agsunod','Jerry','B','jerry.agsunod@school.edu','632987621353',1),
+	('Perete','Paulo','Ll','paulo.perete@school.edu','639857282812',2),
+    ('Guillermo','Red','V','red.guillermo@school.edu','632987698764',3),
+    ('Arispe','Maria Charmy','A','maricharmy.arispe@school.edu','632987667890',6),
+    ('Dorosan','Blessica','B','blessica.dorosan@school.edu','632987621353',1),
+    ('Causapin','Suzanne','S','suzanne.causapin@school.edu','632987654321',7),
+    ('Botin','Khristine','A','khristine.botin@school.edu','632987609876',8),
+    ('Aganan','Jorge Sulpicio','S','jorgesulpicio.aganan@school.edu','632987687592',1),
+    ('Ariño','Mary Antoniette','S','maryantoniette.ariño@school.edu','632987687649',3),
+    ('Carinan','Joseph','L','joseph.carinan@school.edu','634563799365',5);
+    
