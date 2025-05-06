@@ -89,3 +89,10 @@ create table classschedule (
     foreign key (subjectID) references subject (subjectid)
     );
 
+create table student_subject (
+	studentid int,
+	subjectID int,
+
+foreign key (studentID) references student (studentID),
+foreign key (subjectId) references subject (subjectID)
+);
