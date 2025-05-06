@@ -1,4 +1,5 @@
-
+Create database RSMS;
+Use RSMS;
 
 create table course (
 	courseID int primary key auto_increment,
@@ -10,7 +11,7 @@ create table course (
 create table subject (
 	SubjectID int primary key auto_increment,
     SubjecName varchar (100),
-    Description text
+    Description text,
     );
 
 create table student (
@@ -89,3 +90,10 @@ create table classschedule (
     foreign key (subjectID) references subject (subjectid)
     );
 
+create table student_subject (
+	studentid int,
+	subjectID int,
+
+foreign key (studentID) references student (studentID),
+foreign key (subjectId) references subject (subjectID)
+);
