@@ -3,21 +3,21 @@
 create table course (
 	courseID int primary key auto_increment,
     courseName varchar (100),
-    Description varchar (100),
+    Description text,
     credits int
     );
 
 create table subject (
 	SubjectID int primary key auto_increment,
     SubjecName varchar (100),
-    Description varchar(500)
+    Description text,
     );
 
 create table student (
-	StudenID int primary key auto_increment,
+	StudentID int primary key auto_increment,
     lastname varchar (50),
     firstname varchar (50),
-    middleInitial char(1),
+    middleInitial varchar(10),
     DOB date,
     Email varchar (100),
     contact varchar (100),
@@ -27,14 +27,19 @@ create table student (
     province varchar (100),
     block varchar (50),
     CourseID int,
-    foreign key (CourseID) references course(CourseID)
+   	subjectID int,
+ foreign key (CourseID) references course(CourseID),
+
+	foreign key (subjectID) references subject(subjectID)
+	
+
     );
 
 create table faculty (
 	FacultyID int primary key auto_increment,
     Lastname varchar (50),
     firstname varchar (50),
-    middleInitial char (1),
+    middleInitial varchar (10),
     Email varchar (100),
     Contact varchar (15),
     SubjectID int,
@@ -55,17 +60,6 @@ create table grades (
     foreign key (courseID) references course (courseID)
     );
 
-create table enrolledsubject (
-	EnrolledSubject int primary key auto_increment,
-    Semester varchar (10),
-    year year,
-    StudentID int,
-    SubjectID int,
-    CourseID int,
-    foreign key (StudentID) references student (studentid),
-    foreign key ( subjectID) references subject (subjectid),
-    foreign key (courseid) references course (courseid)
-    );
 
 create table enrollment (
 	EnrollmentID int primary key auto_increment,
