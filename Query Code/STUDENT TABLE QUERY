@@ -485,7 +485,7 @@ INSERT INTO student (
 ('Walton', 'English', 'J', '2002-03-18', 'walton.english@school.edu', '634650158139', 'Rizal Street', 'Tula-Tula', 'Legazpi City', 'Albay', '4B', 1),
 ('Norma', 'Henson', 'J', '2002-02-10', 'norma.henson@school.edu', '635740612046', 'Washington Drive', 'Bagumbayan', 'Polangui', 'Albay', '4B', 3),
 ('Eugene', 'Key', 'J', '1995-07-28', 'eugene.key@school.edu', '635903998645', 'Rizal Street', 'Sabang', 'Sto. Domingo', 'Albay', '4B', 1),
-('Estella', 'Murphy', 'J', '2005-02-06', 'estella.murphy@school.edu', '630520766627', 'Quezon Ave', 'Bagumbayan', 'Sto. Domingo', 'Albay', '4B', 4),
+('Estella', 'Murphy','C','2005-02-06','estella.murphy@school.edu', '630520766627', 'Quezon Ave', 'Bagumbayan', 'Sto. Domingo', 'Albay', '4B', 4),
 ('Winnie', 'Chandler', 'H', '2002-11-09', 'winnie.chandler@school.edu', '638719366027', 'Rizal Street', 'Bogtong', 'Malilipot', 'Albay', '4B', 2),
 ('Jake', 'Pitts', 'H', '1996-02-04', 'jake.pitts@school.edu', '635596303364', 'Quezon Ave', 'Tula-Tula', 'Sto. Domingo', 'Albay', '4B', 3),
 ('Jess', 'Morales', 'H', '1995-12-22', 'jess.morales@school.edu', '630568160173', 'Rizal Street', 'Tula-Tula', 'Daraga', 'Albay', '4B', 2),
@@ -772,7 +772,7 @@ INSERT INTO student (
 ('Janice', 'Delgado', 'C', '1998-03-14', 'janice.delgado@school.edu', '633843256985', 'Imperial St', 'Bagumbayan', 'Sto. Domingo', 'Albay', '1B', 1),
 ('Simon', 'Rios', 'C', '1999-04-06', 'simon.rios@school.edu', '631614451743', 'Imperial St', 'Sabang', 'Legazpi City', 'Albay', '1B', 4),
 ('Kirby', 'Lester', 'C', '2004-07-25', 'kirby.lester@school.edu', '633090572645', 'Rizal Street', 'Bagumbayan', 'Sto. Domingo', 'Albay', '1B', 3),
-('Katina', 'Oconnor', 'C', '2001-10-19', 'katina.oconnor@school.edu', '636079563219', 'Rizal Street', 'Rawis', 'Daraga', 'Albay', '1B',  ),  -- CourseID missing
+('Katina', 'Oconnor', 'C', '2001-10-19', 'katina.oconnor@school.edu', '636079563219', 'Rizal Street', 'Rawis', 'Daraga', 'Albay', '1B', 3 ),  
 ('Chase', 'Patton', 'V', '2002-03-24', 'chase.patton@school.edu', '633995263324', 'Magallanes St', 'Ilawod', 'Libon', 'Albay', '1B', 1),
 ('Herman', 'Sutton', 'V', '2000-01-04', 'herman.sutton@school.edu', '637068983959', 'Magallanes St', 'Pawa', 'Sto. Domingo', 'Albay', '1B', 4),
 ('Connie', 'Wilcox', 'V', '1999-10-07', 'connie.wilcox@school.edu', '638241387408', 'Imperial St', 'Rawis', 'Libon', 'Albay', '1B', 3),
@@ -1001,8 +1001,4 @@ INSERT INTO student (
 ('Harper', 'Gonzalez', 'D', '1996-05-22', 'harper.gonzalez@school.edu', '636540272378', 'F. Aquende Drive', 'Rawis', 'Sto. Domingo', 'Albay', '2A', 1),
 ('James', 'Taylor', 'N', '2001-04-08', 'james.taylor@school.edu', '637840728852', 'Imperial St', 'Baybay', 'Tabaco City', 'Albay', '3B', 2),
 ('James', 'Martin', 'R', '2002-03-04', 'james.martin@school.edu', '639492260057', 'Gomez St', 'Pawa', 'Tabaco City', 'Albay', '3B', 4),
-('Benjamin', 'Jones', 'L', '2003-01-23', 'benjamin.jones@school.edu', '635363301058', 'Rizal Street', 'Pawa', 'Daraga', 'Albay', '2A', 2),
-
-
-
-
+('Benjamin', 'Jones', 'L', '2003-01-23', 'benjamin.jones@school.edu', '635363301058', 'Rizal Street', 'Pawa', 'Daraga', 'Albay', '2A', 2);
