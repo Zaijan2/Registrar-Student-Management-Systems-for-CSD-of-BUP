@@ -14,7 +14,7 @@ create table subject (
     );
 
 create table student (
-	StudenID int primary key auto_increment,
+	StudentID int primary key auto_increment,
     lastname varchar (50),
     firstname varchar (50),
     middleInitial varchar(10),
