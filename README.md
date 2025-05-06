@@ -93,7 +93,7 @@ MySQL Workbench
 ## 📈 Progress
 
 -  **Phase 1**: 100 %  
--  **Phase 2**: 25 %  
+-  **Phase 2**: 75 %  
 -  **Phase 3**: ___%  
 -  **Phase 4**: ___%  
 -  **Phase 5**: ___%  
