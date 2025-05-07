@@ -1,0 +1,89 @@
+Total Credits Earned by Each Student (SUM)
+
+SELECT 
+    s.StudentID, 
+    CONCAT(s.firstname, ' ', s.lastname) AS StudentName,
+    SUM(c.credits) AS TotalCredits
+FROM 
+    student s
+JOIN 
+    course c ON s.CourseID = c.CourseID
+JOIN 
+    enrollment e ON s.StudentID = e.StudentID
+WHERE 
+    e.status = 'Completed'
+GROUP BY 
+    s.StudentID
+HAVING 
+    SUM(c.credits) > 0
+ORDER BY 
+    TotalCredits DESC;
+
+Number of Students Enrolled Per Course (COUNT)
+
+SELECT 
+    c.courseName,
+    COUNT(e.StudentID) AS TotalStudents
+FROM 
+    course c
+JOIN 
+    enrollment e ON c.CourseID = e.CourseID
+GROUP BY 
+    c.CourseID
+ORDER BY 
+    TotalStudents DESC;
+
+
+Average Grade Per Subject (AVG)
+
+SELECT 
+    sub.SubjectName,
+    AVG(CASE WHEN g.remarks = 'Passed' THEN 1 ELSE 0 END) AS AvgGrade
+FROM 
+    grades g
+JOIN 
+    subject sub ON g.SubjectID = sub.SubjectID
+GROUP BY 
+    sub.SubjectID
+HAVING 
+    COUNT(g.GradeID) > 5 -- Only subjects with more than 5 grades
+ORDER BY 
+    AvgGrade DESC;
+
+
+Faculty Members with Most Enrolled Students (JOIN + COUNT)
+
+SELECT 
+    f.FacultyID,
+    CONCAT(f.firstname, ' ', f.lastname) AS FacultyName,
+    COUNT(e.StudentID) AS TotalStudents
+FROM 
+    faculty f
+JOIN 
+    subject sub ON f.SubjectID = sub.SubjectID
+JOIN 
+    classschedule cs ON sub.SubjectID = cs.subjectID
+JOIN 
+    enrollment e ON cs.CourseID = e.CourseID AND e.StudentID = cs.StudentID
+GROUP BY 
+    f.FacultyID
+ORDER BY 
+    TotalStudents DESC
+LIMIT 12;
+
+Students Who Failed More Than One Subject
+
+SELECT 
+    s.StudentID,
+    CONCAT(s.firstname, ' ', s.lastname) AS FullName,
+    COUNT(*) AS FailedSubjects
+FROM 
+    grades g
+JOIN 
+    student s ON g.StudentID = s.StudentID
+WHERE 
+    g.remarks = 'Failed'
+GROUP BY 
+    s.StudentID
+HAVING 
+    COUNT(*) > 1;
