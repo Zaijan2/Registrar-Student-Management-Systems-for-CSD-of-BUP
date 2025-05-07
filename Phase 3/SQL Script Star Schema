@@ -1,0 +1,45 @@
+Table dim_course {
+  CourseID int [pk, increment]
+  CourseName varchar(100)
+  Description text
+  Credits int
+}
+
+Table dim_subject {
+  SubjectID int [pk, increment]
+  SubjectName varchar(100)
+  Description text
+}
+
+Table dim_faculty {
+  FacultyID int [pk, increment]
+  FullName varchar(150)
+  Email varchar(100)
+  Contact varchar(15)
+}
+
+Table dim_time {
+  TimeID int [pk, increment]
+  Semester varchar(10)
+  Year year
+}
+
+Table dim_student {
+  StudentID int [pk, increment]
+  FullName varchar(150)
+  DOB date
+  Email varchar(100)
+  Contact varchar(100)
+  Address text 
+}
+
+Table fact_grades {
+  GradeID int [pk, increment]
+  StudentID int [ref: > dim_student.StudentID]
+  SubjectID int [ref: > dim_subject.SubjectID]
+  CourseID int [ref: > dim_course.CourseID]
+  TimeID int [ref: > dim_time.TimeID]
+  FacultyID int [ref: > dim_faculty.FacultyID]
+  Grade varchar(10)
+  Remarks enum('Passed', 'Failed', 'Incomplete')
+}
