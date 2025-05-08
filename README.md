@@ -96,7 +96,7 @@ MySQL Workbench
 -  **Phase 2**: 100 %  
 -  **Phase 3**: 100 %  
 -  **Phase 4**: 100 %  
--  **Phase 5**: ___%  
+-  **Phase 5**: 100 %  
 -  **Phase 6**: ___%
 
 
