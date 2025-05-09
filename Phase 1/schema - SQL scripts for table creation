@@ -28,12 +28,7 @@ create table student (
     province varchar (100),
     block varchar (50),
     CourseID int,
-   	subjectID int,
  foreign key (CourseID) references course(CourseID),
-
-	foreign key (subjectID) references subject(subjectID)
-	
-
     );
 
 create table faculty (
