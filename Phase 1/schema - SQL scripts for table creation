@@ -11,7 +11,7 @@ create table course (
 create table subject (
 	SubjectID int primary key auto_increment,
     SubjectName varchar (100),
-    Description text,
+    Description text
     );
 
 create table student (
