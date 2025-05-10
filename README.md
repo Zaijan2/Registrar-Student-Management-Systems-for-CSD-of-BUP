@@ -1,5 +1,5 @@
 # Registrar Student Management System  
-### For the Computer Studies Department of Bicol University Polangui
+### For Computer Studies Department of Bicol University Polangui
 
 ## 📌 Description
 
