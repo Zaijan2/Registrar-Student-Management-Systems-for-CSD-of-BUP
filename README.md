@@ -125,6 +125,7 @@ If you’re testing manually or for SQL-only purposes, skip this step.
 
 ### ⚙️ Step 3: Testing and Validation (MySQL Workbench)
 Run queries to validate your database:
+
 -- View students
 SELECT * FROM students;
 
