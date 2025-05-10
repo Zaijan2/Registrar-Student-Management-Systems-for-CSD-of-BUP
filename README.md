@@ -100,9 +100,7 @@ MySQL Workbench
 3. Under **Import Options**, select:
    - **"Import from Self-Contained File"**
    - Browse to the path:  
-     ```
-    source/path/to/backup.sql
-     ```
+     ``` source/path/to/backup.sql ```
 4. Under **Default Schema to be Imported To**, click **New...** and then enter erd(name of database):
 
 5. Click **Start Import** (bottom right).
