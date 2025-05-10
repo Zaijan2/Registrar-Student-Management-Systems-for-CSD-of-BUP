@@ -1,10 +1,9 @@
 insert into classschedule (block, room, day, timeslot, studentid, courseid, facultyid, subjectid)
-
 select 
 	elt(floor (rand()*8)+1, '1A','1B','2A','2B','3A','3B','4A','4B')as block,
     concat('room',floor(rand()*8)+1) as room, 
     ELT(FLOOR(RAND() * 7) + 1, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') AS day,
-    ELT(FLOOR(RAND() * 5) + 1, '8:00 AM - 10:00 AM', '10:00 AM - 12:00 PM', '1:00 PM - 3:00 PM', '3:00 PM - 5:00 PM','5:00 PM- 7:00 PM') AS timeslot,
+    ELT(FLOOR(RAND() * 7) + 1, '8:00:00', '10:00:00','12:00:00', '13:00:00', '15:00:00', '17:00:00', '19:00:00') AS timeslot,
 	(select studentid from student order by rand() limit 1) as studentid,
     (select courseid from course order by rand () limit 1) as courseid,
     (select facultyid from faculty order by rand() limit 1) as facultyid,
