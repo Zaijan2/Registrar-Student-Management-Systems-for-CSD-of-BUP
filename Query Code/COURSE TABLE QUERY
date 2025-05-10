@@ -1,5 +1,0 @@
-insert into course (coursename, description, credits)
-values ("Bachelor Of Science in Information System","An information systems major focuses on the integration of technology.",27),
-("Bachelor of Science in Computer Science","Computer science is the study of computer hardware and software.", 27),
-("Bachelor of Science in Information Technology Major in Animation","An animation major is a degree program that teaches students how to create moving, sequential images.", 27),
-("Bachelor of Science in Information Technology", " Information Technology is a broad program of study that encompasses majors that train students in the study of information in data form.", 27);
