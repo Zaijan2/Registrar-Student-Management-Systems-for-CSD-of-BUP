@@ -90,6 +90,60 @@ MySQL Workbench
 
 ---
 
+## ⚙️ How to Restore and Run the System
+
+### 🗄️ Step 1: Restore the Database Using MySQL Workbench (GUI Method)
+
+1. **Open MySQL Workbench** and connect to your MySQL server.
+2. Go to the **Server** menu on the top bar, then select  
+   **Data Import**.
+3. Under **Import Options**, select:
+   - **"Import from Self-Contained File"**
+   - Browse to the path:  
+     ```
+    source/path/to/backup.sql
+     ```
+4. Under **Default Schema to be Imported To**, click **New...** and then enter erd(name of database):
+
+5. Click **Start Import** (bottom right).
+
+6. Wait until you see ✅** “Import completed successfully.”**
+
+---
+
+### ⚙️ Step 2: Connect Your Frontend (Optional)
+If your system includes a frontend (like PHP, Python, or Java app):
+
+Make sure your code is using the correct credentials:
+
+Host:       localhost
+User:       root
+Password:   (your MySQL root password)
+Database:   erd
+
+If you’re testing manually or for SQL-only purposes, skip this step.
+
+---
+
+### ⚙️ Step 3: Testing and Validation (MySQL Workbench)
+Run queries to validate your database:
+-- View students
+SELECT * FROM students;
+
+-- Check enrollment history
+SELECT * FROM enrollment;
+
+-- Grades for a specific student
+SELECT * FROM grades WHERE student_id = 1001;
+
+### 🧠 Tips
+**Make sure MySQL Server is running (you can check via Workbench or system services).**
+
+**If no frontend is connected, you can manage and test everything inside MySQL Workbench directly.**
+
+---
+
+
 ## 📈 Progress
 
 -  **Phase 1**: 100 %  
